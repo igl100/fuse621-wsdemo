@@ -328,7 +328,7 @@ Lets add more brokers to ensure HA. Create two more brokers to publish sum, add 
 
 ![WSCalculator Start](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture16.png)
 
-* Go to web console at Runtime>APIs and check that all three services are started. Notice the port was auto assigned to service Calculate.
+* Go to web console at Services>APIs and check that all three services are started. Notice the port was auto assigned to service Calculate.
 
 ![Console APIs](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture17.png)
 
