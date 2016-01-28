@@ -144,7 +144,7 @@ Note how SOAP request and responses are different for sum, add and multiply serv
 8. Return response to client.
 
 Here is a visual camel route of calculate service:<br/>
-![Camel Route](https://github.com/igl100/FuseWSDemo/blob/master/docs/image/Capture0.png)
+![Camel Route](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture0.png)
 
 ## Objectives
 
@@ -227,7 +227,7 @@ Before running JBoss Fuse for the first time we need to configure user/password 
 
 Clone from GIT:
 * Create or move to an empty dir: `cd <WorkshopProyectsDirToUse>`
-* Run: `git clone https://github.com/igl100/FuseWSDemo.git`
+* Run: `git clone https://github.com/igl100/fuse621-wsdemo.git`
 
 # Deploy wscalculator profile
 
@@ -239,7 +239,7 @@ If settings.xml update is asked, press 'y' and use admin as username and admin f
 
 Wait for success deployment. You can see the new created profile using web console at Runtime>Manage>Uncategorized>wscalculator.
 
-![wscalculator profile](https://github.com/igl100/FuseWSDemo/blob/master/docs/image/Capture7.png)
+![wscalculator profile](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture7.png)
 
 # Create a camel broker for wscalculator
 
@@ -251,11 +251,11 @@ Notices how we define wscalculator profiles as parent.
 
 * Go to web console at Runtime and wait for container to start.
 
-![WSCalculator Start](https://github.com/igl100/FuseWSDemo/blob/master/docs/image/Captura8.png)
+![WSCalculator Start](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Captura8.png)
 
 * Go to web console at Runtime>APIs and check that all three services are started. Notice the port was auto assigned.
 
-![Console APIs](https://github.com/igl100/FuseWSDemo/blob/master/docs/image/Captura9.png)
+![Console APIs](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Captura9.png)
 
 # Edit wscalculate
 
@@ -274,7 +274,7 @@ This project contains the definition of calculate services. In order to deploy:
 
 Wait for success deployment. You can see the new created profile using web console at Runtime>Manage>Uncategorized>wscalculate.
 
-![wscalculate profile](https://github.com/igl100/FuseWSDemo/blob/master/docs/image/Capture10.png)
+![wscalculate profile](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture10.png)
 
 # Create a camel broker
 
@@ -286,11 +286,11 @@ Notices how we define wscalculate profile as parent.
 
 * Go to web console at Runtime and wait for container to start.
 
-![WSCalculator Start](https://github.com/igl100/FuseWSDemo/blob/master/docs/image/Capture11.png)
+![WSCalculator Start](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture11.png)
 
 * Go to web console at Runtime>APIs and check that all three services are started. Notice the port was auto assigned to service Calculate.
 
-![Console APIs](https://github.com/igl100/FuseWSDemo/blob/master/docs/image/Capture12.png)
+![Console APIs](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture12.png)
 
 # Use Soap UI to invoke the services
 
@@ -300,17 +300,17 @@ At this point, the services should be exposed and ready to be invoked. Use Soap 
 
 * On fabric console run: `fabric:container-create-child --profile gateway-http root WSGateway`. This commando will create a new broker with gateway-http profile assigned. This profile enable load balancing for web, services and messaging request. By default it listen at port 9000 (this can be changed).
 
-![WSGateway Broker](https://github.com/igl100/FuseWSDemo/blob/master/docs/image/Capture13.png)
+![WSGateway Broker](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture13.png)
 
 * On web console edit wsproxy.properties inside wscalculate profile. Go to Runtime>Manage>Uncategorized and click on wscalculate profile. 
 
-![wscalculate profile edit](https://github.com/igl100/FuseWSDemo/blob/master/docs/image/Capture14.png)
+![wscalculate profile edit](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture14.png)
 
 * Click on wsproxy.properties file on the left side.
 * When properties are display, click on edit button on the top/right side.
 * Change port value to 9000
 
-![wscalculate port change](https://github.com/igl100/FuseWSDemo/blob/master/docs/image/Capture15.png)
+![wscalculate port change](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture15.png)
 
 * Click save button.
 
@@ -326,22 +326,22 @@ Lets add more brokers to ensure HA. Create two more brokers to publish sum, add 
 
 * Go to web console at Runtime and wait for container to start.
 
-![WSCalculator Start](https://github.com/igl100/FuseWSDemo/blob/master/docs/image/Capture16.png)
+![WSCalculator Start](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture16.png)
 
 * Go to web console at Runtime>APIs and check that all three services are started. Notice the port was auto assigned to service Calculate.
 
-![Console APIs](https://github.com/igl100/FuseWSDemo/blob/master/docs/image/Capture17.png)
+![Console APIs](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture17.png)
 
 * Run `fabric:container-create-child --profile wscalculate root WSCalculate2`
 * Run `fabric:container-create-child --profile wscalculate root WSCalculate3`
 
 * Go to web console at Runtime and wait for container to start.
 
-![WSCalculator Start](https://github.com/igl100/FuseWSDemo/blob/master/docs/image/Capture18.png)
+![WSCalculator Start](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture18.png)
 
 * Go to web console at Runtime>APIs and check that all three services are started. Notice the port was auto assigned to service Calculate.
 
-![Console APIs](https://github.com/igl100/FuseWSDemo/blob/master/docs/image/Capture19.png)
+![Console APIs](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture19.png)
 
 As you can see, brokers can now be added and stopped at runtime and WSGateway will balance over active services.
 
