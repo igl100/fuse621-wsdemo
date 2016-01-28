@@ -245,7 +245,7 @@ Wait for success deployment. You can see the new created profile using web conso
 
 We need to create a broker that use the profile created in the last steps to actually expose the services.
 
-* `fabric:container-create-child --profile wscalculator root WSCalculator`
+* `fabric:container-create-child --profile wscalculator root ws-calculator1`
 
 Notices how we define wscalculator profiles as parent.
 
@@ -280,7 +280,7 @@ Wait for success deployment. You can see the new created profile using web conso
 
 We need to create a broker that use both profiles created in the last steps to actually expose all the services.
 
-* `fabric:container-create-child --profile wscalculate root WSCalculate`
+* `fabric:container-create-child --profile wscalculate root ws-calculate1`
 
 Notices how we define wscalculate profile as parent.
 
@@ -298,7 +298,7 @@ At this point, the services should be exposed and ready to be invoked. Use Soap 
 
 # Enable HA on web services
 
-* On fabric console run: `fabric:container-create-child --profile gateway-http root WSGateway`. This commando will create a new broker with gateway-http profile assigned. This profile enable load balancing for web, services and messaging request. By default it listen at port 9000 (this can be changed).
+* On fabric console run: `fabric:container-create-child --profile gateway-http root ws-gateway`. This commando will create a new broker with gateway-http profile assigned. This profile enable load balancing for web, services and messaging request. By default it listen at port 9000 (this can be changed).
 
 ![WSGateway Broker](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture13.png)
 
@@ -321,8 +321,8 @@ After brokers refresh, note that services can be accessed at port 9000 too.
 
 Lets add more brokers to ensure HA. Create two more brokers to publish sum, add and multiply services.
 
-* Run `fabric:container-create-child --profile wscalculator root WSCalculator2`
-* Run `fabric:container-create-child --profile wscalculator root WSCalculator3`
+* Run `fabric:container-create-child --profile wscalculator root ws-calculator2`
+* Run `fabric:container-create-child --profile wscalculator root ws-calculator3`
 
 * Go to web console at Runtime and wait for container to start.
 
@@ -332,8 +332,8 @@ Lets add more brokers to ensure HA. Create two more brokers to publish sum, add 
 
 ![Console APIs](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture17.png)
 
-* Run `fabric:container-create-child --profile wscalculate root WSCalculate2`
-* Run `fabric:container-create-child --profile wscalculate root WSCalculate3`
+* Run `fabric:container-create-child --profile wscalculate root ws-calculate2`
+* Run `fabric:container-create-child --profile wscalculate root ws-calculate3`
 
 * Go to web console at Runtime and wait for container to start.
 
