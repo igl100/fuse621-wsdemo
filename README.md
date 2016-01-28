@@ -185,7 +185,7 @@ This demo will include information about several topics wich include:
 	- `unzip jboss-fuse-full-6.2.1.redhat-084.zip`<br/>
     ![Unzip Command](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture1.png)
     
-	- `export FUSE_HOME=/opt/redhat/jboss-fuse-full-6.2.1.redhat-084`
+	- `export FUSE_HOME=/opt/redhat/jboss-fuse-6.2.1.redhat-084`
 
 	Thats it!!!, JBoss Fuse is already install!!!
  
