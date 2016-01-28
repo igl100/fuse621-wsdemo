@@ -1,6 +1,6 @@
 # Introduction
 
-This demo was created to review some general features of JBoss Fuse 6.1.1 <br/>
+This demo was created to review some general features of JBoss Fuse 6.2.1 <br/>
 It was created to help new fuse developers to understand how to create web services using different approaches. This services will execute basic mathematical operations (sum, add, multiply). We will create an additional web service that will standardize request to the other services and act as a proxy too.<br/><br/>
 
 ENJOY!!!!
@@ -164,7 +164,7 @@ This demo will include information about several topics wich include:
 
 ## Pre-Requisites
 
-1. JBoss Fuse 6.1.1 zip installation file 
+1. JBoss Fuse 6.2.1 zip installation file 
 2. Java JDK 7 installed
 3. Apache Maven 3.1.1 version installed
 4. Web Browser
@@ -182,10 +182,10 @@ This demo will include information about several topics wich include:
 1. Unzip JBoss Fuse on any directory that you wish to use as $FUSE_HOME. In this example i will use directory `/opt/redhat/`. Copy JBoss Fuse installation zip file on the selected directory and be sure your user have read, write and execute privileges.
 
 	- `cd /opt/redhat`
-	- `unzip jboss-fuse-full-6.1.1.redhat-412.zip`<br/>
-    ![Unzip Command](https://github.com/igl100/JBossFuseHADemo/blob/master/docs/image/Capture1.png)
+	- `unzip jboss-fuse-full-6.2.1.redhat-080.zip`<br/>
+    ![Unzip Command](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture1.png)
     
-	- `export FUSE_HOME=/opt/redhat/jboss-fuse-full-6.1.1.redhat-412`
+	- `export FUSE_HOME=/opt/redhat/jboss-fuse-full-6.2.1.redhat-080`
 
 	Thats it!!!, JBoss Fuse is already install!!!
  
@@ -206,7 +206,7 @@ Before running JBoss Fuse for the first time we need to configure user/password 
 2. Access karaf console:
 	-  `$FUSE_HOME/bin/client -u admin -p admin` 
     <br/>If you get a message **"Failed to get the session"** wait a few seconds and try again. This message means that JBoss Fuse is starting.<br/>
-	![Karaf Console](https://github.com/igl100/JBossFuseHADemo/blob/master/docs/image/Capture2.png)
+	![Karaf Console](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture2.png)
 
 3. Create a fabric so we can manage all the brokers from a single console:
 	- `fabric:create --clean --wait-for-provisioning  --bind-address localhost --resolver manualip --global-resolver manualip --manual-ip localhost --zookeeper-password admin`<br/><br/>
@@ -214,14 +214,14 @@ Before running JBoss Fuse for the first time we need to configure user/password 
     
 4. Validate that fabric created by running `container-list` on karaf console.
 	<br/>
-	![Container-list command](https://github.com/igl100/JBossFuseHADemo/blob/master/docs/image/Capture3.png)
+	![Container-list command](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture3.png)
 
 5. Open URL http://localhost:8181 on a web browser and login with user admin and password admin<br/>
-	![Fabric Login](https://github.com/igl100/JBossFuseHADemo/blob/master/docs/image/Capture4.png)
+	![Fabric Login](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture4.png)
     <br/>
-    ![Fabric Home](https://github.com/igl100/JBossFuseHADemo/blob/master/docs/image/Capture5.png)
+    ![Fabric Home](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture5.png)
     <br/>
-    ![Fabric Containers](https://github.com/igl100/JBossFuseHADemo/blob/master/docs/image/Capture6.png)
+    ![Fabric Containers](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture6.png)
 
 # Cloning Proyects
 
