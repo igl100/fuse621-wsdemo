@@ -253,7 +253,7 @@ Notices how we define wscalculator profiles as parent.
 
 ![WSCalculator Start](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Captura8.png)
 
-* Go to web console at Runtime>APIs and check that all three services are started. Notice the port was auto assigned.
+* Go to web console at Services>APIs and check that all three services are started. Notice the port was auto assigned.
 
 ![Console APIs](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Captura9.png)
 
@@ -288,7 +288,7 @@ Notices how we define wscalculate profile as parent.
 
 ![WSCalculator Start](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture11.png)
 
-* Go to web console at Runtime>APIs and check that all three services are started. Notice the port was auto assigned to service Calculate.
+* Go to web console at Services>APIs and check that all three services are started. Notice the port was auto assigned to service Calculate.
 
 ![Console APIs](https://github.com/igl100/fuse621-wsdemo/blob/master/docs/image/Capture12.png)
 
